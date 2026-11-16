@@ -1,0 +1,199 @@
+# Loon 配置（由用户的 Surge 配置转换，2026-11-17）
+# 转换要点：
+# 1. Surge 的 smart 组在 Loon 里用 url-test 代替；policy-regex-filter 改为 [Remote Filter] 里的 NameRegex 过滤器，组里按名引用
+# 2. 两个机场订阅链接的 target 已由 surge 改为 loon（否则 Loon 解析不了 Surge 格式的节点列表）
+# 3. Surge 的 MITM CA 证书已一并带过来，Loon 里不用重新生成证书
+# 4. Surge 没有对应项的设置（http-api、external-controller 等）已舍弃，不影响分流
+
+[General]
+ipv6-vif = auto
+ip-mode = dual
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+dns-server = system,119.29.29.29,114.114.114.114,223.5.5.5
+allow-wifi-access = false
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+proxy-test-url = http://bing.com/generate_204
+internet-test-url = http://wifi.vivo.com.cn/generate_204
+test-timeout = 3
+interface-mode = auto
+
+[Proxy]
+home = Shadowsocks,www.hsf134.top,7788,aes-128-gcm,"123123",fast-open=true,udp=true,block-quic=true
+vless-美国圣何塞 = VLESS,shsamd01sui.200308.xyz,26132,"8d7ec72b-f3b5-469b-8f2d-ad9dd107eef2",transport=tcp,flow=xtls-rprx-vision,public-key="FipOYF-zIGIE0C5doeL640zakfrrIglOV0psml2Ilmg",short-id=f8e5,udp=true,block-quic=true,over-tls=true
+vless-新加坡 = VLESS,xjpsui.200308.xyz,46323,"204361cf-7403-4ede-9df2-e012aba5d549",transport=tcp,flow=xtls-rprx-vision,public-key="Yfc2Yy0AvhqmEvWh9vBVTL8mhD6OlObwnX2hWAvdQSc",short-id=93a4,udp=true,block-quic=true,over-tls=true,sni=amd.com
+
+[Remote Proxy]
+FlowerCloud订阅 = https://api-huacloud.dev/sub?target=loon&insert=true&emoji=true&tfo=true&filename=Flower_Trojan&url=https%3A%2F%2Fapi.xmancdn.com%2Fosubscribe.php%3Ftoken2%3Dy96wm6mq-4e1f3f17b0ve9qmaini6vo,udp=default,block-quic=false,fast-open=default,vmess-aead=true,skip-cert-verify=default,enabled=true,flexible-sni=false,img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/FlowerCloud.png
+TAG订阅 = https://huaikhwang.central-world.org/api/v1/trails/bolster?token=764107eaf7d8ae008194a8dfa35742b0,udp=default,block-quic=false,fast-open=default,vmess-aead=true,skip-cert-verify=default,enabled=true,flexible-sni=false,img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/TAG.png
+
+[Remote Filter]
+F全部 = NameRegex,FlowerCloud订阅, FilterKey = "^((?!(网易云|墨鱼|GB|Expire)).)*$"
+T全部 = NameRegex,TAG订阅, FilterKey = "^((?!(网易云|墨鱼|GB|Expire)).)*$"
+F可用 = NameRegex,FlowerCloud订阅, FilterKey = "^((?!(网易云|超时|墨鱼|GB|Expire)).)*$"
+T可用 = NameRegex,TAG订阅, FilterKey = "^((?!(网易云|超时|墨鱼|GB|Expire)).)*$"
+F香港 = NameRegex,FlowerCloud订阅, FilterKey = "香港|HK|hongkong"
+F日本 = NameRegex,FlowerCloud订阅, FilterKey = "日本|JP"
+F美国 = NameRegex,FlowerCloud订阅, FilterKey = "美国|US"
+F台湾 = NameRegex,FlowerCloud订阅, FilterKey = "台湾|TW"
+F韩国 = NameRegex,FlowerCloud订阅, FilterKey = "韩国|KR"
+F狮城 = NameRegex,FlowerCloud订阅, FilterKey = "新加坡|新|SG"
+F冷门 = NameRegex,FlowerCloud订阅, FilterKey = "^((?!(香港|台湾|日本|美国|韩国|新加坡)).)*$"
+T香港 = NameRegex,TAG订阅, FilterKey = "1x HK"
+T日本 = NameRegex,TAG订阅, FilterKey = "1x JP"
+T美国 = NameRegex,TAG订阅, FilterKey = "1x US"
+T台湾 = NameRegex,TAG订阅, FilterKey = "1x TW"
+T韩国 = NameRegex,TAG订阅, FilterKey = "KR"
+T狮城 = NameRegex,TAG订阅, FilterKey = "1x SG"
+家宽筛选 = NameRegex,TAG订阅, FilterKey = "家宽"
+Emby筛选 = NameRegex,FlowerCloud订阅, FilterKey = "0.20x|Hong Kong"
+
+[Proxy Group]
+FlowerCloud = url-test,F全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Flowercloud.png
+TAG = url-test,TAG订阅,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/TAG.png
+节点选择 = select,自动选择,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,冷门节点,Home,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/02ProxySoftLogo/Surge(16).png
+自动选择 = url-test,F全部,T全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+Available = select,vless-新加坡,vless-美国圣何塞,F可用,T可用,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
+Telegram = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+YouTube = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
+TikTok = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
+Netflix = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+Disneyᐩ = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+_1.png
+X = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/x.png
+Muse = select,家宽筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/Muse.png
+OpenAi = select,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ChatGPT/ChatGPT6.png
+Apple Intelligence = select,F香港节点,F日本节点,F美国节点,F狮城节点,F台湾节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/AppleIntelligence.png
+Gemini = select,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/gemini(1).png
+Spotify = select,节点选择,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+Google = select,节点选择,Available,F香港节点,F台湾节点,F日本节点,F美国节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+Github = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,冷门节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+SpeedTest = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
+Emby = select,DIRECT,Emby筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/emby.png
+Microsoft = select,DIRECT,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+Apple = select,DIRECT,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+Global = select,Available,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+Home = select,home,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png
+Final = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,冷门节点,DIRECT,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+F香港节点 = url-test,F香港,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+T香港节点 = url-test,T香港,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png
+F日本节点 = url-test,F日本,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+T日本节点 = url-test,T日本,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png
+F美国节点 = url-test,F美国,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+T美国节点 = select,T美国,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png
+F台湾节点 = url-test,F台湾,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+T台湾节点 = select,T台湾,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
+F韩国节点 = url-test,F韩国,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+T韩国节点 = url-test,T韩国,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KR.png
+F狮城节点 = url-test,F狮城,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+T狮城节点 = url-test,T狮城,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png
+冷门节点 = url-test,F冷门,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Thailand.png
+TAG家宽 = select,家宽筛选,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png
+
+[Rule]
+# 局域网（原 Surge 内置 LAN 规则集，Loon 无内置，改为本地 IP 段直连）
+IP-CIDR,192.168.10.0/24,home,no-resolve
+IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+# 封面拼接
+DOMAIN-SUFFIX,pics.dmm.co.jp,F日本节点
+DOMAIN-SUFFIX,awsimgsrc.dmm.co.jp,F日本节点
+# 个人服务器走直连
+DOMAIN-KEYWORD,tagss,DIRECT
+# X / xAI-Grok（原 ddgksf2013 Ai.yaml 按用户要求仅保留 xAI/Grok 部分）
+DOMAIN-SUFFIX,x.ai,X
+DOMAIN-SUFFIX,grok.com,X
+# Emby
+DOMAIN-SUFFIX,cn2gias.uk,Emby
+# 国内兜底
+GEOIP,CN,DIRECT
+FINAL,Final
+
+[Remote Rule]
+# 黄果规则
+https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/huangguo.list, policy=F日本节点, tag=黄果, enabled=true
+# JavDB核心
+https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/javdb.list, policy=F香港节点, tag=JavDB核心, enabled=true
+# 播放源
+https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/bofangyuan.list, policy=F香港节点, tag=播放源, enabled=true
+# shortdrama
+https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/shortdrama.list, policy=DIRECT, tag=shortdrama, enabled=true
+# WeChat
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=DIRECT, tag=WeChat, enabled=true
+# Microsoft
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list, policy=Microsoft, tag=Microsoft, enabled=true
+# Telegram
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
+# YouTube
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list, policy=YouTube, tag=YouTube, enabled=true
+# TikTok
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list, policy=TikTok, tag=TikTok, enabled=true
+# X（Twitter）
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list, policy=X, tag=X, enabled=true
+# Ai.yaml（ddgksf2013 的 AI 规则包）按用户要求仅取其中 xAI/Grok 两条，已内嵌到上方 [Rule] 段（走 X 组）；原 YAML 地址 Loon 无法解析，故不在此处引用
+# Spotify
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list, policy=Spotify, tag=Spotify, enabled=true
+# Muse
+https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/muse.list, policy=Muse, tag=Muse, enabled=true
+# ChatGPT
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list, policy=OpenAi, tag=OpenAi, enabled=true
+# Gemini
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list, policy=Gemini, tag=Gemini, enabled=true
+# Apple Intelligence
+https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/AppleIntelligence, policy=Apple Intelligence, tag=AppleIntelligence, enabled=true
+# Netflix
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list, policy=Netflix, tag=Netflix, enabled=true
+# Disney+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list, policy=Disneyᐩ, tag=Disney, enabled=true
+# Google
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list, policy=Google, tag=Google, enabled=true
+# GitHub
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list, policy=Github, tag=Github, enabled=true
+# SpeedTest
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list, policy=SpeedTest, tag=SpeedTest, enabled=true
+# Apple
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list, policy=Apple, tag=Apple, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_Domain.list, policy=Apple, tag=AppleDomain, enabled=true
+# Global
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia.list, policy=Global, tag=GlobalMedia, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_Domain.list, policy=Global, tag=GlobalMediaDomain, enabled=true
+# 国内 IP（ChinaASN）
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaASN/ChinaASN.list, policy=DIRECT, tag=ChinaASN, enabled=true
+
+[Rewrite]
+
+[Plugin]
+https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/VideoGo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/SodaMusic_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PiPiXia_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Kuwo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/KuGou_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/KuGouYouth_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Douyu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Dewu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/NodeLinkCheck.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Baidu_input_method_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduTranslate_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/WARP_Node_Query.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/1.1.1.1.lpx, enabled=true
+[Mitm]
+ca-p12 = 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
+ca-passphrase = 1M30MB65
+skip-server-cert-verify = true
