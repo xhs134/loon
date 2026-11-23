@@ -46,7 +46,7 @@ T美国 = NameRegex,TAG订阅, FilterKey = "1x US"
 T台湾 = NameRegex,TAG订阅, FilterKey = "1x TW"
 T韩国 = NameRegex,TAG订阅, FilterKey = "KR"
 T狮城 = NameRegex,TAG订阅, FilterKey = "1x SG"
-家宽筛选 = NameRegex,TAG订阅, FilterKey = "家宽"
+家宽筛选 = NameRegex,TAG订阅, FilterKey = "日本家宽|美国-家宽|新加坡家宽|加拿大-家宽"
 Emby筛选 = NameRegex,FlowerCloud订阅, FilterKey = "0.20x|Hong Kong"
 
 [Proxy Group]
@@ -80,9 +80,9 @@ T香港节点 = url-test,T香港,url = http://www.gstatic.com/generate_204,inter
 F日本节点 = url-test,F日本,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 T日本节点 = url-test,T日本,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png
 F美国节点 = url-test,F美国,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-T美国节点 = select,T美国,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png
+T美国节点 = url-test,T美国,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png
 F台湾节点 = url-test,F台湾,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
-T台湾节点 = select,T台湾,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
+T台湾节点 = url-test,T台湾,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
 F韩国节点 = url-test,F韩国,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 T韩国节点 = url-test,T韩国,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KR.png
 F狮城节点 = url-test,F狮城,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -112,12 +112,11 @@ GEOIP,CN,DIRECT
 FINAL,Final
 
 [Remote Rule]
+https://raw.githubusercontent.com/xhs134/surge/main/sese.list, policy=F香港节点, tag=Rexporn, enabled=true
+https://raw.githubusercontent.com/xhs134/surge/main/hanime1.list, policy=F美国节点, tag=hanime1, enabled=true
 # 黄果规则
-https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/huangguo.list, policy=F日本节点, tag=黄果, enabled=true
 # JavDB核心
-https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/javdb.list, policy=F香港节点, tag=JavDB核心, enabled=true
 # 播放源
-https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/bofangyuan.list, policy=F香港节点, tag=播放源, enabled=true
 # shortdrama
 https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/shortdrama.list, policy=DIRECT, tag=shortdrama, enabled=true
 # WeChat
@@ -165,6 +164,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge
 [Rewrite]
 
 [Plugin]
+https://raw.githubusercontent.com/ios151/Rewrite/refs/heads/main/dev-loopback/modules/dev-loopback.lpx, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/VideoGo_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
