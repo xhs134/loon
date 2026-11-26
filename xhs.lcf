@@ -55,27 +55,28 @@ TAG = url-test,TAG订阅,url = http://www.gstatic.com/generate_204,interval = 60
 节点选择 = select,自动选择,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,冷门节点,Home,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/02ProxySoftLogo/Loon.png
 自动选择 = url-test,F全部,T全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
 Available = select,vless-新加坡,vless-美国圣何塞,F可用,T可用,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
-Telegram = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-YouTube = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
-TikTok = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
-Netflix = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-Disneyᐩ = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+_1.png
-X = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/x.png
+Telegram = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+YouTube = select,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
+TikTok = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
+Netflix = select,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+Disneyᐩ = select,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+_1.png
+X = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/x.png
+PT站点 = select,F香港节点,F日本节点,F台湾节点,DIRECT,img-url = https://testingcf.jsdelivr.net/gh/xhs134/icons@main/pt/ubits.png
 Claude = select,家宽筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/claude(1).png
 Muse = select,家宽筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/Muse.png
-OpenAi = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ChatGPT/ChatGPT6.png
-Apple Intelligence = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/AppleIntelligence.png
-Gemini = select,F香港节点,F日本节点,F美国节点,F台湾节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/gemini(1).png
-Spotify = select,F香港节点,F日本节点,F美国节点,F台湾节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-Google = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-Github = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
-SpeedTest = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
+OpenAi = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ChatGPT/ChatGPT6.png
+Apple Intelligence = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/AppleIntelligence.png
+Gemini = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/gemini(1).png
+Spotify = select,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+Google = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+Github = select,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+SpeedTest = select,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
 Emby = select,DIRECT,Emby筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/emby.png
 Microsoft = select,DIRECT,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
 Apple = select,DIRECT,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
-Global = select,Available,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+Global = select,Available,F香港节点,T香港节点,F日本节点,T日本节点,F美国节点,T美国节点,F台湾节点,T台湾节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 Home = select,home,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png
-Final = select,F香港节点,F日本节点,F美国节点,F台湾节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,DIRECT,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+Final = select,F香港节点,T香港节点,F日本节点,T日本节点,F台湾节点,T台湾节点,F美国节点,T美国节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,DIRECT,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 F香港节点 = url-test,F香港,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 T香港节点 = url-test,T香港,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png
 F日本节点 = url-test,F日本,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -113,8 +114,9 @@ GEOIP,CN,DIRECT
 FINAL,Final
 
 [Remote Rule]
+https://raw.githubusercontent.com/xhs134/surge/main/pt.list, policy=DIRECT, tag=PT站点, enabled=true
 https://raw.githubusercontent.com/xhs134/surge/main/yuanshuju.list, policy=F日本节点, tag=预告片/元数据, enabled=true
-https://raw.githubusercontent.com/xhs134/surge/main/sese.list, policy=F香港节点, tag=Rexporn, enabled=true
+https://raw.githubusercontent.com/xhs134/surge/main/sese.list, policy=F日本节点, tag=Rexporn, enabled=true
 https://raw.githubusercontent.com/xhs134/surge/main/hanime1.list, policy=F美国节点, tag=hanime1, enabled=true
 # 黄果规则
 # JavDB核心
