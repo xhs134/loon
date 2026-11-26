@@ -114,18 +114,21 @@ GEOIP,CN,DIRECT
 FINAL,Final
 
 [Remote Rule]
+# PT站点
 https://raw.githubusercontent.com/xhs134/surge/main/pt.list, policy=DIRECT, tag=PT站点, enabled=true
+# 预告片/元数据
 https://raw.githubusercontent.com/xhs134/surge/main/yuanshuju.list, policy=F日本节点, tag=预告片/元数据, enabled=true
+# Rexporn
 https://raw.githubusercontent.com/xhs134/surge/main/sese.list, policy=F日本节点, tag=Rexporn, enabled=true
-https://raw.githubusercontent.com/xhs134/surge/main/hanime1.list, policy=F美国节点, tag=hanime1, enabled=true
-# 黄果规则
-# JavDB核心
-# 播放源
-# shortdrama
-https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/shortdrama.list, policy=DIRECT, tag=shortdrama, enabled=true
-# WeChat
+# Hanime1
+https://raw.githubusercontent.com/xhs134/surge/main/hanime1.list, policy=F美国节点, tag=Hanime1, enabled=true
+# ShortDrama
+https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/shortdrama.list, policy=DIRECT, tag=ShortDrama, enabled=true
+# 115网盘
 https://raw.githubusercontent.com/xhs134/surge/main/115pan.list, policy=DIRECT, tag=115网盘, enabled=true
-https://raw.githubusercontent.com/xhs134/surge/main/91short.list, policy=DIRECT, tag=91short, enabled=false
+# 91Short
+https://raw.githubusercontent.com/xhs134/surge/main/91short.list, policy=DIRECT, tag=91Short, enabled=true
+# WeChat
 https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
 # Microsoft
 https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Microsoft.lsr, policy=Microsoft, tag=Microsoft, enabled=true
