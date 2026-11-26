@@ -52,29 +52,30 @@ Emby筛选 = NameRegex,FlowerCloud订阅, FilterKey = "0.20x|Hong Kong"
 [Proxy Group]
 FlowerCloud = url-test,F全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Flowercloud.png
 TAG = url-test,TAG订阅,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/TAG.png
-节点选择 = select,自动选择,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,冷门节点,Home,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/02ProxySoftLogo/Surge(16).png
+节点选择 = select,自动选择,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,冷门节点,Home,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/02ProxySoftLogo/Loon.png
 自动选择 = url-test,F全部,T全部,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
 Available = select,vless-新加坡,vless-美国圣何塞,F可用,T可用,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
-Telegram = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-YouTube = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
-TikTok = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
-Netflix = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-Disneyᐩ = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+_1.png
-X = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/x.png
+Telegram = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+YouTube = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
+TikTok = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
+Netflix = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+Disneyᐩ = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+_1.png
+X = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/x.png
+Claude = select,家宽筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/claude(1).png
 Muse = select,家宽筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/Muse.png
-OpenAi = select,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ChatGPT/ChatGPT6.png
-Apple Intelligence = select,F香港节点,F日本节点,F美国节点,F狮城节点,F台湾节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/AppleIntelligence.png
-Gemini = select,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/gemini(1).png
-Spotify = select,节点选择,F香港节点,F日本节点,F美国节点,F台湾节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-Google = select,节点选择,Available,F香港节点,F台湾节点,F日本节点,F美国节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-Github = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F狮城节点,冷门节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
-SpeedTest = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
+OpenAi = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ChatGPT/ChatGPT6.png
+Apple Intelligence = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/AppleIntelligence.png
+Gemini = select,F香港节点,F日本节点,F美国节点,F台湾节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/gemini(1).png
+Spotify = select,F香港节点,F日本节点,F美国节点,F台湾节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+Google = select,Available,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+Github = select,F香港节点,F台湾节点,F日本节点,F美国节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+SpeedTest = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
 Emby = select,DIRECT,Emby筛选,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/emby.png
 Microsoft = select,DIRECT,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
 Apple = select,DIRECT,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
 Global = select,Available,自动选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 Home = select,home,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png
-Final = select,Available,F香港节点,F日本节点,F美国节点,F台湾节点,冷门节点,DIRECT,T香港节点,T日本节点,T美国节点,T台湾节点,F韩国节点,T韩国节点,F狮城节点,T狮城节点,TAG家宽,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+Final = select,F香港节点,F日本节点,F美国节点,F台湾节点,F韩国节点,F狮城节点,T香港节点,T日本节点,T美国节点,T台湾节点,T韩国节点,T狮城节点,DIRECT,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 F香港节点 = url-test,F香港,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 T香港节点 = url-test,T香港,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png
 F日本节点 = url-test,F日本,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -112,6 +113,7 @@ GEOIP,CN,DIRECT
 FINAL,Final
 
 [Remote Rule]
+https://raw.githubusercontent.com/xhs134/surge/main/yuanshuju.list, policy=F日本节点, tag=预告片/元数据, enabled=true
 https://raw.githubusercontent.com/xhs134/surge/main/sese.list, policy=F香港节点, tag=Rexporn, enabled=true
 https://raw.githubusercontent.com/xhs134/surge/main/hanime1.list, policy=F美国节点, tag=hanime1, enabled=true
 # 黄果规则
@@ -120,52 +122,58 @@ https://raw.githubusercontent.com/xhs134/surge/main/hanime1.list, policy=F美国
 # shortdrama
 https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/shortdrama.list, policy=DIRECT, tag=shortdrama, enabled=true
 # WeChat
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=DIRECT, tag=WeChat, enabled=true
+https://raw.githubusercontent.com/xhs134/surge/main/115pan.list, policy=DIRECT, tag=115网盘, enabled=true
+https://raw.githubusercontent.com/xhs134/surge/main/91short.list, policy=DIRECT, tag=91short, enabled=false
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
 # Microsoft
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list, policy=Microsoft, tag=Microsoft, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Microsoft.lsr, policy=Microsoft, tag=Microsoft, enabled=true
 # Telegram
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
 # YouTube
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list, policy=YouTube, tag=YouTube, enabled=true
 # TikTok
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list, policy=TikTok, tag=TikTok, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/TikTok.lsr, policy=TikTok, tag=TikTok, enabled=true
 # X（Twitter）
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list, policy=X, tag=X, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Twitter.lsr, policy=X, tag=X, enabled=true
 # Ai.yaml（ddgksf2013 的 AI 规则包）按用户要求仅取其中 xAI/Grok 两条，已内嵌到上方 [Rule] 段（走 X 组）；原 YAML 地址 Loon 无法解析，故不在此处引用
 # Spotify
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list, policy=Spotify, tag=Spotify, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Spotify.lsr, policy=Spotify, tag=Spotify, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Claude.lsr, policy=Claude, tag=Claude, enabled=true
 # Muse
 https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/muse.list, policy=Muse, tag=Muse, enabled=true
 # ChatGPT
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list, policy=OpenAi, tag=OpenAi, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/OpenAI.lsr, policy=OpenAi, tag=OpenAi, enabled=true
 # Gemini
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list, policy=Gemini, tag=Gemini, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Gemini.lsr, policy=Gemini, tag=Gemini, enabled=true
 # Apple Intelligence
 https://raw.githubusercontent.com/xhs134/surge/refs/heads/main/AppleIntelligence, policy=Apple Intelligence, tag=AppleIntelligence, enabled=true
 # Netflix
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list, policy=Netflix, tag=Netflix, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Netflix.lsr, policy=Netflix, tag=Netflix, enabled=true
 # Disney+
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list, policy=Disneyᐩ, tag=Disney, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Disney.lsr, policy=Disneyᐩ, tag=Disney, enabled=true
 # Google
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list, policy=Google, tag=Google, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Google.lsr, policy=Google, tag=Google, enabled=true
 # GitHub
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list, policy=Github, tag=Github, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/GitHub.lsr, policy=Github, tag=Github, enabled=true
 # SpeedTest
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list, policy=SpeedTest, tag=SpeedTest, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Speedtest.lsr, policy=SpeedTest, tag=SpeedTest, enabled=true
 # Apple
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list, policy=Apple, tag=Apple, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Apple.lsr, policy=Apple, tag=Apple, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_Domain.list, policy=Apple, tag=AppleDomain, enabled=true
 # Global
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia.list, policy=Global, tag=GlobalMedia, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/GlobalMedia.lsr, policy=Global, tag=GlobalMedia, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_Domain.list, policy=Global, tag=GlobalMediaDomain, enabled=true
 # 国内 IP（ChinaASN）
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaASN/ChinaASN.list, policy=DIRECT, tag=ChinaASN, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/ChinaASN.lsr, policy=DIRECT, tag=ChinaASN, enabled=true
 
 [Rewrite]
 
 [Plugin]
-https://raw.githubusercontent.com/ios151/Rewrite/refs/heads/main/dev-loopback/modules/dev-loopback.lpx, enabled=false
-https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx, enabled=true
+https://nys4f2st.nvidia.cn.com:8443/tag.sgmodule, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/Block/hgdj.lpx, enabled=true
+https://raw.githubusercontent.com/ios151/Rewrite/refs/heads/main/dev-loopback/modules/dev-loopback.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx, enabled=false
 https://kelee.one/Tool/Loon/Lpx/VideoGo_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
@@ -189,8 +197,8 @@ https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/WARP_Node_Query.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=F香港节点, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=F香港节点, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/1.1.1.1.lpx, enabled=true
 [Mitm]
